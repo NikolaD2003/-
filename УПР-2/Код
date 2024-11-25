@@ -1,0 +1,20 @@
+def is_palindrom(s):
+
+#Премахвам интервали, правя всички букви малки и махам всчки символи
+cleaned_string = ''.join(char.lower() for char in s if char.isalnum())
+
+#Проверявам дали стрингът е равен на обърнатия си вариант
+return cleaned_string ==cleaned_string[::-1]
+
+#Пример
+string1 = "Sit on a potato pan, Otis."
+string2 = "Hello"
+
+#Резултат който трябва да изведе False или True
+print(f'"{string1}" е палиндром: {is_palindrome(string1)}')
+print(f'"{string2}" е палиндром: {is_palindrome(string2)}')
+
+
+
+
+
